@@ -71,10 +71,6 @@ const updateUsuario = async (req, res) => {
         return res.status(400).send({message: "O campo 'senha' não foi encontrado"});
     }
 
-    // if (!found) {
-    //     res.status(404).send({message: "Não foi encontrado"});
-    // }
-
     return res.status(200).send(await usuarioService.updateUsuario(id, usuario));
 }
 
